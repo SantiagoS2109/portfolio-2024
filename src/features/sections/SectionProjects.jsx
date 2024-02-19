@@ -8,7 +8,7 @@ function SectionProjects() {
 
   console.log(projects);
   return (
-    <section id="proyectos" className="mt-20 pt-12">
+    <section id="proyectos" className="mt-16 pt-12">
       <div className="flex items-center gap-3">
         <Code size={36} weight="bold" />
         <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">

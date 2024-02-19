@@ -3,7 +3,7 @@ import AboutMeImg from "../../assets/aboutme.webp";
 
 function SectionAboutMe() {
   return (
-    <section id="sobremi" className="mt-20 pt-12">
+    <section id="sobremi" className="mt-8 pt-12">
       <div className="flex items-center gap-3">
         <User size={36} weight="bold" />
         <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">
@@ -11,7 +11,7 @@ function SectionAboutMe() {
         </h2>
       </div>
 
-      <div className="sm:grid-cols-aboutme-layout mt-2 grid grid-cols-1">
+      <div className="mt-2 grid grid-cols-1 sm:grid-cols-aboutme-layout">
         <picture className="flex items-center justify-center sm:order-1">
           <img
             className="aspect-square h-52 w-52 rotate-6 rounded-[4rem] object-cover shadow-xl"

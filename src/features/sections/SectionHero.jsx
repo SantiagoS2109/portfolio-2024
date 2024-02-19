@@ -32,21 +32,30 @@ function SectionHero({ reference: ref }) {
 
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <button className="rounded-full border border-cyan bg-gray4 px-4 py-1 font-medium text-cyan transition-all duration-300 hover:bg-cyan hover:text-white">
-          <a className="flex items-center gap-2" href="">
+          <a
+            className="flex items-center gap-2"
+            href="https://www.linkedin.com/in/santiago-sepúlveda-022a8a217/"
+          >
             <LinkedinLogo size={24} weight="bold" />
             <span>Linkedin</span>
           </a>
         </button>
 
         <button className="rounded-full border border-cyan bg-gray4 px-4 py-1 font-medium text-cyan transition-all duration-300 hover:bg-cyan hover:text-white">
-          <a className="flex items-center gap-2" href="">
+          <a
+            className="flex items-center gap-2"
+            href="https://github.com/SantiagoS2109"
+          >
             <GithubLogo size={24} weight="bold" />
             <span>Github</span>
           </a>
         </button>
 
         <button className="rounded-full border border-cyan bg-gray4 px-4 py-1 font-medium text-cyan transition-all duration-300 hover:bg-cyan hover:text-white">
-          <a className="flex items-center gap-2" href="">
+          <a
+            className="flex items-center gap-2"
+            href="mailto:santiagosepul2109@gmail.com?Subject=Interesado%20en%20contactarte"
+          >
             <Envelope size={24} weight="bold" />
             <span>santiagosepul2109@gmail.com</span>
           </a>

@@ -3,7 +3,7 @@ import { Book } from "@phosphor-icons/react";
 
 function SectionEducation() {
   return (
-    <section id="educacion" className="mt-20 pt-12">
+    <section id="educacion" className="mt-8 pt-12">
       <div className="flex items-center gap-3">
         <Book size={36} weight="bold" />
         <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">
@@ -57,7 +57,7 @@ function EducationItem({ title, institution, date, description }) {
   return (
     <li className="mb-6 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-0">
       <div className="relative">
-        <div className="bg-cyan2 absolute -left-[25px] top-[6px] h-4 w-4 rounded-full lg:-left-[27px] lg:h-5 lg:w-5"></div>
+        <div className="absolute -left-[25px] top-[6px] h-4 w-4 rounded-full bg-cyan2 lg:-left-[27px] lg:h-5 lg:w-5"></div>
         <h3 className="text-lg font-bold text-cyan lg:w-4/5 lg:text-2xl">
           {title}
         </h3>

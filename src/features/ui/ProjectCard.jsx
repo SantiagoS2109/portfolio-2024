@@ -10,7 +10,7 @@ function ProjectCard({ project }) {
       </picture>
       <div>
         <h3 className="mt-4 text-2xl font-bold sm:text-4xl">{project.title}</h3>
-        <div className="mt-3 flex flex-wrap gap-2">
+        {/* <div className="mt-3 flex flex-wrap gap-2">
           <div className="flex w-fit items-center gap-2 rounded-full bg-blue-900 px-2 py-1 text-white">
             <svg
               viewBox="0 0 256 154"
@@ -37,7 +37,7 @@ function ProjectCard({ project }) {
             </svg>
             <span className="text-sm">Tailwind</span>
           </div>
-        </div>
+        </div> */}
 
         <p className="mt-2 text-sm text-gray7">{project.description}</p>
 
