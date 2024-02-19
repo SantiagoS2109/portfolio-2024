@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { getProjects } from "./notion";
+import { getProjects } from "./apiNotion";
 
 export function useProjects() {
   const {
