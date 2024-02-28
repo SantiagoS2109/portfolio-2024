@@ -1,12 +1,15 @@
 import { User } from "@phosphor-icons/react";
 import AboutMeImg from "../../assets/aboutme.webp";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 function SectionAboutMe() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section id="sobremi" className="mt-8 pt-12">
       <div className="flex items-center gap-3">
-        <User size={36} weight="bold" />
-        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">
+        <User size={36} weight="bold" color={isDarkMode ? "white" : "black"} />
+        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl dark:text-white">
           Sobre mí
         </h2>
       </div>
@@ -19,7 +22,7 @@ function SectionAboutMe() {
             alt="Santiago Sepúlveda Dev."
           />
         </picture>
-        <div className="mt-6 flex flex-col gap-3 text-xs lg:text-base">
+        <div className="mt-6 flex flex-col gap-3 text-xs lg:text-base dark:text-gray4">
           <p>
             Mi nombre es Santiago Sepúlveda, y tengo 21 años. Desde mi infancia,
             he sentido una profunda fascinación por el mundo de la tecnología y

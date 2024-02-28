@@ -2,16 +2,16 @@
 import { Code } from "@phosphor-icons/react";
 import { useProjects } from "../../services/useProjects";
 import ProjectCard from "../ui/ProjectCard";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 function SectionProjects() {
+  const { isDarkMode } = useDarkMode();
   const { isLoading, projects } = useProjects();
-
-  console.log(projects);
   return (
     <section id="proyectos" className="mt-16 pt-12">
       <div className="flex items-center gap-3">
-        <Code size={36} weight="bold" />
-        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">
+        <Code size={36} weight="bold" color={isDarkMode ? "white" : "black"} />
+        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl dark:text-white">
           Proyectos
         </h2>
       </div>

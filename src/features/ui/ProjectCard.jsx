@@ -1,15 +1,22 @@
 /* eslint-disable react/prop-types */
 
 import { GithubLogo, Link } from "@phosphor-icons/react";
+import Button from "./Button";
 
 function ProjectCard({ project }) {
   return (
     <li className="mb-16 grid grid-cols-1 last:mb-0 lg:grid-cols-2 lg:gap-6">
-      <picture>
-        <img className="w-full rounded-xl" src={project.img} alt="" />
+      <picture className="aspect-video overflow-hidden rounded-xl transition-all duration-300 hover:shadow-lg dark:shadow-white ">
+        <img
+          className="scale-105 rounded-xl transition-all duration-300 ease-in-out hover:scale-100"
+          src={project.img}
+          alt=""
+        />
       </picture>
       <div>
-        <h3 className="mt-4 text-2xl font-bold sm:text-4xl">{project.title}</h3>
+        <h3 className="mt-4 text-2xl font-bold sm:text-4xl dark:text-white">
+          {project.title}
+        </h3>
         {/* <div className="mt-3 flex flex-wrap gap-2">
           <div className="flex w-fit items-center gap-2 rounded-full bg-blue-900 px-2 py-1 text-white">
             <svg
@@ -39,22 +46,22 @@ function ProjectCard({ project }) {
           </div>
         </div> */}
 
-        <p className="mt-2 text-sm text-gray7">{project.description}</p>
+        <p className="mt-2 text-sm text-gray7 dark:text-gray4">
+          {project.description}
+        </p>
 
         <div className="mt-4 flex gap-2">
-          <button className="rounded-full border border-cyan bg-gray4 px-4 py-1 font-medium text-cyan transition-all duration-300 hover:bg-cyan hover:text-white">
-            <a className="flex items-center gap-2" href={project.code}>
-              <GithubLogo size={24} weight="bold" />
-              <span>Código</span>
-            </a>
-          </button>
+          <Button href={project.code}>
+            {" "}
+            <GithubLogo size={24} weight="bold" />
+            <span>Código</span>
+          </Button>
 
-          <button className="rounded-full border border-cyan bg-gray4 px-4 py-1 font-medium text-cyan transition-all duration-300 hover:bg-cyan hover:text-white">
-            <a className="flex items-center gap-2" href={project.demo}>
-              <Link size={24} weight="bold" />
-              <span>Demo</span>
-            </a>
-          </button>
+          <Button href={project.demo}>
+            {" "}
+            <Link size={24} weight="bold" />
+            <span>Demo</span>
+          </Button>
         </div>
       </div>
     </li>

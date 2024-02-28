@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import { Book } from "@phosphor-icons/react";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 function SectionEducation() {
+  const { isDarkMode } = useDarkMode();
   return (
     <section id="educacion" className="mt-8 pt-12">
       <div className="flex items-center gap-3">
-        <Book size={36} weight="bold" />
-        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">
+        <Book size={36} weight="bold" color={isDarkMode ? "white" : "black"} />
+        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl dark:text-white">
           Educación
         </h2>
       </div>
@@ -61,12 +63,18 @@ function EducationItem({ title, institution, date, description }) {
         <h3 className="text-lg font-bold text-cyan lg:w-4/5 lg:text-2xl">
           {title}
         </h3>
-        <h4 className="font-semibold text-gray9 lg:text-xl">{institution}</h4>
-        <span className="text-sm text-gray7 lg:text-base">{date}</span>
+        <h4 className="font-semibold text-gray9 lg:text-xl dark:text-white">
+          {institution}
+        </h4>
+        <span className="text-sm text-gray7 lg:text-base dark:text-gray4">
+          {date}
+        </span>
       </div>
       <div>
         {description ? (
-          <p className="text-sm text-gray7 lg:text-base">{description}</p>
+          <p className="text-sm text-gray7 lg:text-base dark:text-gray4">
+            {description}
+          </p>
         ) : null}
       </div>
     </li>

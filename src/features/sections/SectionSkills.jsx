@@ -7,13 +7,16 @@ import CSSIcon from "../../assets/css.svg";
 import FigmaIcon from "../../assets/figma.svg";
 import GitIcon from "../../assets/git.svg";
 import SupabaseIcon from "../../assets/supabase.svg";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 function SectionSkills() {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <section id="skills" className="mt-8 pt-12">
       <div className="flex items-center gap-3">
-        <Brain size={36} weight="bold" />
-        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl">
+        <Brain size={36} weight="bold" color={isDarkMode ? "white" : "black"} />
+        <h2 className="font-RedHat text-3xl font-bold text-gray9 sm:text-5xl dark:text-white">
           Habilidades
         </h2>
       </div>
@@ -44,7 +47,9 @@ function SkillItem({ icon, label }) {
         src={icon}
         alt={`${label} Icon`}
       />
-      <span className="text-sm font-medium md:text-base">{label}</span>
+      <span className="text-sm font-medium md:text-base dark:text-gray4">
+        {label}
+      </span>
     </div>
   );
 }
