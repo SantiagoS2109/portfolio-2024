@@ -51,11 +51,13 @@ function ProjectCard({ project }) {
         </p>
 
         <div className="mt-4 flex gap-2">
-          <Button href={project.code}>
-            {" "}
-            <GithubLogo size={24} weight="bold" />
-            <span>Código</span>
-          </Button>
+          {project.code != null ? (
+            <Button href={project.code}>
+              {" "}
+              <GithubLogo size={24} weight="bold" />
+              <span>Código</span>
+            </Button>
+          ) : null}
 
           <Button href={project.demo}>
             {" "}

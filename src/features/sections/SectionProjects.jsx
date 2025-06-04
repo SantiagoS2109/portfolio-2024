@@ -7,6 +7,7 @@ import { useDarkMode } from "../../context/DarkModeContext";
 function SectionProjects() {
   const { isDarkMode } = useDarkMode();
   const { isLoading, projects } = useProjects();
+
   return (
     <section id="proyectos" className="mt-16 pt-12">
       <div className="flex items-center gap-3">
